@@ -3,6 +3,7 @@ import Page from '../../components/Page/Page';
 import styles from './LoginPage.module.scss';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
+import LoginInput from './LoginInput/LoginInput';
 
 const LoginPage = () => {
   return (
@@ -45,7 +46,7 @@ const LoginPage = () => {
         </motion.header>
 
         <div className={cn(styles.content)}>
-          <div className={cn(styles.container)}></div>
+          <LoginInput label={'Логин'} placeholder={'Введите логин...'} />
         </div>
       </div>
     </Page>
