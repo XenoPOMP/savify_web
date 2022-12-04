@@ -1,5 +1,8 @@
 .themeProvider {
   &.dark {
+    // Header
+    --head-font-color: white;
+
     // Login
     --log-background: #333232;
   }
