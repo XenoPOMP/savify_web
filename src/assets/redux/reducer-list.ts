@@ -1,4 +1,3 @@
-import { secondExampleReducer } from './reducers/secondExampleReducer';
-import { exampleReducer } from './reducers/exampleReducer';
+import { loginReducer } from './reducers/loginReducer';
 
-export { secondExampleReducer, exampleReducer };
+export { loginReducer };

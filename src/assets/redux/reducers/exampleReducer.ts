@@ -4,7 +4,7 @@ const defaultState = {
 
 export const exampleReducer = (
   state = defaultState,
-  action: { type: string; payload: any }
+  action: { type: string, payload: any },
 ) => {
   switch (action.type) {
     case 'INCREMENT_STATE':
@@ -17,5 +17,3 @@ export const exampleReducer = (
       return state;
   }
 };
-
-export default exampleReducer;
