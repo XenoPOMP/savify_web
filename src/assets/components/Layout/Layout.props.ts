@@ -1,5 +1,9 @@
-import { ReactNode } from 'react';
+import { ChildrenProps } from '../../functions/ChildrenProps';
 
-export interface LayoutProps {
-  children?: ReactNode;
+export type lProps = {
+  useLayout: boolean,
+};
+
+export interface LayoutProps extends ChildrenProps {
+  outerProps: lProps;
 }

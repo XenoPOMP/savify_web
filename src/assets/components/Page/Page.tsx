@@ -3,9 +3,9 @@ import Layout from '../Layout/Layout';
 import { PageProps } from './Page.props';
 import MetaTitle from '../MetaTitle/MetaTitle';
 
-const Page: FC<PageProps> = ({ meta, children }) => {
+const Page: FC<PageProps> = ({ meta, children, layoutProps }) => {
   return (
-    <Layout>
+    <Layout outerProps={layoutProps}>
       <MetaTitle
         pageTitle={meta.pageTitle}
         pageDescription={meta.pageDescription}
