@@ -5,8 +5,14 @@
   @extend %uiGrid;
   padding: 0;
   font-size: 20px;
+  margin-bottom: 1.5em;
+
+  &:last-of-type {
+    margin-bottom: 3em;
+  }
 
   .container {
+
     .label {
       color: var(--log-label-font-color);
       grid-column-start: 1;
@@ -28,7 +34,12 @@
       border: none;
       outline: none;
       background: var(--log-input-background);
-      color: var(--log-input-font-color);
+      color: var(--log-input-placeholder-font-color);
+      transition: color .15s ease;
+
+      &:focus {
+        color: var(--log-input-font-color);
+      }
 
       &::-webkit-input-placeholder {
         color: var(--log-input-placeholder-font-color);

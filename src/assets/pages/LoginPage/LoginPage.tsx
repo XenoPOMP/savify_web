@@ -46,7 +46,14 @@ const LoginPage = () => {
         </motion.header>
 
         <div className={cn(styles.content)}>
-          <LoginInput label={'Логин'} placeholder={'Введите логин...'} />
+          <div className={cn(styles.container)}>
+            <LoginInput label={'Логин'} placeholder={'Введите логин...'} />
+            <LoginInput label={'Пароль'} placeholder={'Введите пароль...'} />
+          </div>
+
+          <div className={cn(styles.buttonPlaceholder)}>
+            <button>Войти</button>
+          </div>
         </div>
       </div>
     </Page>

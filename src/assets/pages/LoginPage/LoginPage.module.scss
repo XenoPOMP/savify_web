@@ -34,11 +34,36 @@
   }
 
   .content {
-    @extend %uiGrid;
     height: calc(100vh - 68px);
+    @extend %uiGrid;
+    flex-direction: column;
 
     .container {
+      display: block;
+    }
 
+    .buttonPlaceholder {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(var(--column-count), 1fr);
+      height: 2em;
+
+      button {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        padding: .581em;
+        border-radius: 1.425em;
+        border: none;
+        outline: none;
+        grid-column-start: 4;
+        grid-column-end: 10;
+        cursor: pointer;
+        font-size: .645em;
+        background: var(--log-button-inactive-background);
+        color: var(--log-button-inactive-font-color);
+
+        transition: background-color .15s ease, color .15s ease;
+      }
     }
   }
 }
