@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Page from '../../components/Page/Page';
 import styles from './LoginPage.module.scss';
 import cn from 'classnames';
@@ -6,6 +6,9 @@ import { motion } from 'framer-motion';
 import LoginInput from './LoginInput/LoginInput';
 
 const LoginPage = () => {
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <Page
       meta={{ pageTitle: 'Логин', pageDescription: '', keywords: '' }}
@@ -47,8 +50,16 @@ const LoginPage = () => {
 
         <div className={cn(styles.content)}>
           <div className={cn(styles.container)}>
-            <LoginInput label={'Логин'} placeholder={'Введите логин...'} />
-            <LoginInput label={'Пароль'} placeholder={'Введите пароль...'} />
+            <LoginInput
+              label={'Логин'}
+              placeholder={'Введите логин...'}
+              useState={{ state: login, setState: setLogin }}
+            />
+            <LoginInput
+              label={'Пароль'}
+              placeholder={'Введите пароль...'}
+              useState={{ state: password, setState: setPassword }}
+            />
           </div>
 
           <div className={cn(styles.buttonPlaceholder)}>

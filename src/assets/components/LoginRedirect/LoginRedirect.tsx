@@ -21,7 +21,7 @@ const LoginRedirect = () => {
     dispatch({ type: 'SET_LOGGED_STATUS', payload: payload.logged });
 
     // Redirect if user is not logged
-    if (!payload.logged) document.location.href = '/auth/login';
+    // if (!payload.logged) document.location.href = '/auth/login';
   }, []);
 
   return <></>;
